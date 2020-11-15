@@ -5,10 +5,10 @@ import matplotlib.pyplot as plt
 
 
 data_a = np.random.randn(100, 2)
-data_a[(data_a[:, 0] >= 0) & (data_a[:, 1] >= 0)] = [-0.1, -0.1]
+data_a[(data_a[:, 0] >= -0.1) & (data_a[:, 1] >= -0.1)] = [-0.5, -0.5]
 
 data_b = np.random.randn(100, 2)
-data_b[(data_b[:, 0] <= 0) | (data_b[:, 1] <= 0)] = [+0.1, +0.1]
+data_b[(data_b[:, 0] <= 0.1) | (data_b[:, 1] <= 0.1)] = [+0.5, +0.5]
 
 
 label_a = np.ones((100, 1))
@@ -34,9 +34,7 @@ def activate_sigmoid(t):
 
 
 def activate_relu(t):
-    if t >= 1:
-        y = 1
-    elif t >= 0:
+    if t >= 0:
         y = t
     else:
         y = 0
@@ -73,7 +71,7 @@ Learn_rate = 0.01
 W_h2 = np.random.randn(2, 1)
 b_h2 = np.random.randn(1)
 
-iteration = 2000
+iteration = 1000
 total = np.concatenate((group_a, group_b), axis=0)
 
 # first layer
@@ -97,12 +95,6 @@ for i in range(len(total[:, 0])):
     predict_h2[0, i] = activate_step(
         W_h2[0] * total[i, 0] + W_h2[1] * total[i, 1] + b_h2)
 
-"""
-predict_h2 = np.zeros((1, len(total[:, 0])))
-for i in range(len(total[:, 0])):
-    predict_h2[0, i] = activate_step(
-        W_h2[0] * total[i, 0] + W_h2[1] * total[i, 1] + b_h2)
-"""
 
 # second layer
 W = np.random.randn(2, 1)
@@ -113,7 +105,7 @@ Learn_rate = 0.05
 res = np.vstack([np.array(predict_h1), np.array(predict_h2)])
 total = np.vstack([res, total[:, 2]]).T
 
-for i in range(iteration):
+for i in range(iteration*2):
     W, b = logistic_regression(total, Learn_rate, W, b, opt="sigmoid")
 
 predict = activate_sigmoid(W[0] * total[:, 0] + W[1] * total[:, 1] + b)
