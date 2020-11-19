@@ -7,6 +7,7 @@
 # First Commit from SungwookLE(11/16)
 
 This is the practice and check stage to practice the tensorFlow
+One Layer Perceptron Learning w/ tensorflow
 
 We've prepared a Jupyter notebook that will guide you through the process of creating a single layer neural network in TensorFlow.
 
