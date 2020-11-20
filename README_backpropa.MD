@@ -9,26 +9,26 @@
 
 # STEP1: onelayer_with_sigmoid
 
-[image][./one_sigmoid.jpg]
-[image][./one_with_sigmoid.png]
+<img src="one_sigmoid.jpg"/>
+<img src="one_with_sigmoid.png"/>
 
 # STEP2: twolayer_with_sigmoid
 
 how to implement the backpropagtion to hidden layer that is compose of sigmoid
 
-[image][./two_sigmoid.jpg]
-[image][./two_with_sigmoid.png]
+<img src="two_sigmoid.jpg"/>
+<img src="two_with_sigmoid.png"/>
 
 # STEP3: two_with_relu
 
 relu looks different and more powerful (not vanishing gradinet!)
 
-[image][./two_relu.jpg]
-[image][./two_with_relu.png]
+<img src="two_relu.jpg"/>
+<img src="two_with_relu.png"/>
 
 # what is cross-entropy
 
-[image][./cross_entropy.jpg]
+<img src="cross_entropy.jpg"/>
 
 ## THE SOURCE file is
 
