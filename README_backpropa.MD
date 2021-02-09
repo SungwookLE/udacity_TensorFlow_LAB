@@ -2,8 +2,8 @@
 
 - reference:
 
-1. excelsior-cjh.tistory.com/171
-2. https://bskyvision.com/718
+1. [Ref1](http://excelsior-cjh.tistory.com/171)
+2. [Ref2](https://bskyvision.com/718)
 
 - I recommand that to read and write , so that make it yours.., It looks simple but, hard to fully understand
 
